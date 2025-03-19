@@ -51,7 +51,7 @@ def _get_project_info() -> Tuple[str, str]:
         return d[0]
 
     def has_init(*args: str) -> bool:
-        return Path((*args, "__init__.py")).exists()
+        return Path(*(*args, "__init__.py")).exists()
 
     ns = explore_dir(ROOT, "src")
     if ns == "gufo":

@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: Gufo SNMP
+title: Gufo NOC Speeduo
 message: >-
   If you use this software as part of a publication and wish to cite
   it, please use the metadata from this file.
@@ -8,5 +8,5 @@ authors:
   - name: Gufo Labs
     website: https://gufolabs.com/
   - name: Project's Contributors
-    website: https://github.com/gufolabs/gufo_snmp
+    website: https://github.com/gufolabs/gufo_noc_speedup
 license: BSD-3-Clause
