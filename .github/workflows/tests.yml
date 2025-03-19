@@ -52,7 +52,7 @@ jobs:
 
   py-test:
     runs-on: ubuntu-24.04
-    needs: [py-lint, rust-test]
+    needs: [py-lint]
     strategy:
       fail-fast: true
       matrix:
