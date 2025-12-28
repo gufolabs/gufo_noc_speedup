@@ -14,5 +14,5 @@ Attributes:
 # Gufo Labs modules
 from ._fast import encode_int, encode_oid, parse_p_oid, parse_tlv_header
 
-__version__: str = "0.1.0"
+__version__: str = "0.1.1"
 __all__ = ["encode_int", "encode_oid", "parse_p_oid", "parse_tlv_header"]

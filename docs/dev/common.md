@@ -3,7 +3,6 @@
 ## Bump Version
 
 * [ ] Change `__version__` in `src/gufo/snmp/__init__.py`
-* [ ] Change `[package]/version` in `Cargo.toml`
 * [ ] Add section in `CHANGELOG.md`
 
 ## Bump Rust Version
