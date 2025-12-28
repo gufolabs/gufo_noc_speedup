@@ -80,7 +80,7 @@ jobs:
         run: python -m pip install --upgrade pip
 
       - name: Install Dependencies
-        run: pip install -IU -e .[build,rest]
+        run: pip install -IU -e .[build,test]
 
       - name: Build cython module
         run: python -m pip install --editable .
