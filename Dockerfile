@@ -1,5 +1,6 @@
-FROM python:3.13-slim-bullseye AS dev
-COPY .requirements /tmp
+FROM python:3.14-slim-trixie AS dev
+COPY . /workspaces/gufo_noc_speedup
+WORKDIR /workspaces/gufo_noc_speedup
 RUN \
     set -x \
     && apt-get clean \
@@ -11,9 +12,4 @@ RUN \
     libc6-dev\
     && pip install --upgrade pip\
     && pip install --upgrade build\
-    && pip install\
-    -r /tmp/build.txt\
-    -r /tmp/docs.txt\
-    -r /tmp/ipython.txt\
-    -r /tmp/lint.txt\
-    -r /tmp/test.txt
+    && pip install -e .[build,docs,ipython,lint,test]

@@ -53,6 +53,7 @@ do
         3.11) ABI=cp311-cp311 ;;
         3.12) ABI=cp312-cp312 ;;
         3.13) ABI=cp313-cp313 ;;
+        3.14) ABI=cp314-cp314 ;;
         *)
             echo "Unknown Python version $1"
             exit 2
@@ -72,7 +73,7 @@ do
     echo "Upgrade pip..."
     pip install --upgrade pip
     echo "Setup build dependencies..."
-    pip install -r ./.requirements/build.txt -r ./.requirements/test.txt
+    pip install -e .[build,test]
     echo "Building wheel..."
     empty_dir "${DIST}"
     empty_dir "${BUILD}"

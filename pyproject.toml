@@ -1,6 +1,6 @@
 [build-system]
 build-backend = "setuptools.build_meta"
-requires = ["setuptools>=61.2", "wheel", "cython==3.0.12"]
+requires = ["setuptools>=61.2", "wheel", "cython==3.2.3"]
 
 [project]
 authors = [{name = "Gufo Labs"}]
@@ -15,6 +15,7 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: 3.12",
   "Programming Language :: Python :: 3.13",
+  "Programming Language :: Python :: 3.14",
   "License :: Free To Use But Restricted",
   "Topic :: Software Development",
   "Topic :: Software Development :: Libraries",
@@ -28,7 +29,33 @@ dynamic = ["version"]
 keywords = ["error"]
 license = {text = "Free to use with restrictions"}
 name = "gufo_noc_speedup"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+build = [
+  "cython==3.2.3",
+]
+docs = [
+  "mkdocs-gen-files==0.5.0",
+  "mkdocs-literate-nav==0.6.2",
+  "mkdocs-material==9.6.11",
+  "mkdocs-section-index==0.3.10",
+  "mkdocstrings[python]==0.29.1",
+]
+ipython = [
+  "ipython==9.6.0",
+]
+lint = [
+  "mypy==1.18.2",
+  "ruff==0.14.0",
+  "types-PyYAML==6.0.12.3",
+]
+test = [
+  "PyYAML>=6.0",
+  "pytest-benchmark==5.1.0",
+  "pytest-cov==7.0.0",
+  "pytest==8.4.2",
+]
 
 [project.readme]
 content-type = "text/markdown"
@@ -70,7 +97,7 @@ directory = "dist/coverage"
 exclude = [".git", "build", "dist"]
 line-length = 79
 # Assume Python 3.9
-target-version = "py39"
+target-version = "py10"
 # Enable
 select = [
   "E", # Pycodestyle Error

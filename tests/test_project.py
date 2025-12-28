@@ -1,7 +1,7 @@
 # ---------------------------------------------------------------------
 # Gufo Labs: Project structure tests
 # ---------------------------------------------------------------------
-# Copyright (C) 2022-24, Gufo Labs
+# Copyright (C) 2022-25, Gufo Labs
 # See LICENSE.md for details
 # ---------------------------------------------------------------------
 
@@ -74,9 +74,6 @@ REQUIRED_FILES = [
     ".github/ISSUE_TEMPLATE/feature-request.yml",
     ".github/PULL_REQUEST_TEMPLATE.md",
     ".gitignore",
-    ".requirements/docs.txt",
-    ".requirements/lint.txt",
-    ".requirements/test.txt",
     "CHANGELOG.md",
     "CITATION.cff",
     "CODE_OF_CONDUCT.md",
